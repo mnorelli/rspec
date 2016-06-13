@@ -329,7 +329,7 @@ Add an expectation to the dog that, "allows the reading and writing of a hunger 
 ```ruby
 describe Dog do
   #...
-  describe "#name" do
+  describe "#hunger_level" do
     it "allows the reading and writing of a hunger level" do
       dog = Dog.new
       dog.hunger_level = 5
@@ -360,7 +360,7 @@ Let's impliment a method `eat` which decrements a dog's hunger level when invoke
 ```ruby
 describe Dog do
   #...
-  describe "eat" do
+  describe "#eat" do
     it "decrements the hunger level when invoked" do
       dog = Dog.new
       dog.hunger_level = 5
@@ -402,7 +402,7 @@ Use `describe` for "things" and `context` for "states.
 ```ruby
 describe Dog do
   #...
-  describe "eat" do
+  describe "#eat" do
     context "when the dog is hungry" do
       it "decrements the hunger level when invoked" do
         dog = Dog.new
@@ -468,7 +468,7 @@ describe Dog do
       expect(dog.hunger_level).to eq(5)
     end
   end
-  describe "eat" do
+  describe "#eat" do
     context "when the dog is hungry" do
       it "decrements the hunger level when invoked" do
         dog = Dog.new
@@ -516,7 +516,7 @@ describe Dog do
       expect(dog.hunger_level).to eq(5)
     end
   end
-  describe "eat" do
+  describe "#eat" do
     context "when the dog is hungry" do
       it "decrements the hunger level when invoked" do
 
@@ -563,7 +563,7 @@ describe Dog do
       expect(dog.hunger_level).to eq(5)
     end
   end
-  describe "eat" do
+  describe "#eat" do
     context "when the dog is hungry" do
       it "decrements the hunger level when invoked" do
         dog.eat
